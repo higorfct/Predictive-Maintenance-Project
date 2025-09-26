@@ -1,6 +1,6 @@
 # 🚀 Predictive Maintenance with MLOps
 
-This repository implements a simple pipeline for **predicting industrial equipment failures** using machine learning.  
+This repository implements a simple pipeline for **predicting industrial equipment failures** using Random Forest and Poisson Distribution.  
 It showcases how to prepare data, train models, save artifacts, evaluate metrics, and expose reusable utilities — all essential steps in an **MLOps** workflow.
 
 ---
