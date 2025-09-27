@@ -1,0 +1,23 @@
+name: Predictive Maintenance Project
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    container: ghcr.io/iterative/cml:0-dvc2-base1
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: iterative/setup-cml@v1
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run predictive maintenance pipeline
+        run: python Notebook/Predictive__Maintenance_.py
