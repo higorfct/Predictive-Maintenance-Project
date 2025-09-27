@@ -2,5 +2,5 @@ pandas
 numpy
 matplotlib
 joblib
-spicy.stats
-sklearn
+spicy
+scikit-learn
