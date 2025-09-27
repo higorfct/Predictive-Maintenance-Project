@@ -3,4 +3,4 @@ numpy
 matplotlib
 joblib
 spicy
-sklearn
+scikit-learn
