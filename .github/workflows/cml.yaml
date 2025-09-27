@@ -20,4 +20,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run predictive maintenance pipeline
-        run: python Notebook/Predictive__Maintenance_.py
+        run: python Notebook/Predictive__Maintenance_.py data/failure_dataset.csv
