@@ -1,82 +1,62 @@
-# 🚀 Predictive Maintenance with MLOps
+# 🚀 Predictive Maintenance with MLOps  
 
-This repository implements a simple pipeline for **predicting industrial equipment failures** using Random Forest and Poisson Distribution.  
-It showcases how to prepare data, train models, save artifacts, evaluate metrics, and expose reusable utilities — all essential steps in an **MLOps** workflow.
-
----
-
-## 📂 Project Structure
-
-- **`train.py`**  
-  - Loads the dataset `data/failure_dataset.csv`.
-  - Performs preprocessing (standardization with `StandardScaler`).
-  - Trains a baseline `RandomForestRegressor` model.
-  - Runs **hyperparameter tuning** with `GridSearchCV`.
-  - Saves artifacts (`model.pkl` and `scaler.pkl`) for later use.
-
-- **`evaluate.py`**  
-  - Loads the saved artifacts.
-  - Makes predictions on the test set.
-  - Computes performance metrics (MAE and R²) to monitor model quality.
-
-- **`utils.py`**  
-  - `predict_failure`: receives operational data and returns the model’s prediction.
-  - `plot_poisson_distribution`: generates a Poisson distribution visualization from the predicted failure rate.
+This repository implements a pipeline for **predicting industrial equipment failures** using Random Forest and Poisson Distribution.  
+It demonstrates how to prepare data, train the model, tune hyperparameters, make predictions, and visualize probabilities — all in a **single script**.  
 
 ---
 
-## ⚙️ Pipeline Workflow (MLOps)
+## 📂 Project Structure  
 
-This project is structured to reflect basic **MLOps** principles:
-
-1. **Versioning and Reproducibility**  
-   - Separate scripts for training and evaluation.
-   - Artifacts saved to disk (`model.pkl`, `scaler.pkl`), enabling version control.
-
-2. **Automation**  
-   - The training (`train.py`) and evaluation (`evaluate.py`) flows can be integrated into CI/CD pipelines to automate retraining and monitoring.
-
-3. **Continuous Monitoring**  
-   - Evaluation metrics (MAE and R²) allow tracking model performance over time.
-
-4. **Reuse and Deployment**  
-   - The `utils.py` module abstracts functions for use in APIs, dashboards, or external scripts.
+- **`Predictive__Maintenance.py`**  
+  - Loads the dataset `failure_dataset.csv`.  
+  - Preprocesses features with `StandardScaler`.  
+  - Splits data into train and test sets.  
+  - Trains a `RandomForestRegressor`.  
+  - Runs **hyperparameter tuning** with `GridSearchCV`.  
+  - Predicts equipment failures from operational data.  
+  - Computes and visualizes failure probabilities using **Poisson Distribution**.  
 
 ---
 
-## 💡 Business Benefits of Applying MLOps Here
+## ⚙️ Workflow  
 
-Implementing **MLOps practices** in this predictive maintenance scenario delivers clear business value:
+1. **Load and Preprocess Data**  
+   - Reads `failure_dataset.csv`.  
+   - Applies scaling to ensure proper feature normalization.  
 
-- **Reduced Downtime Costs:**  
-  Early failure prediction helps plan maintenance proactively, minimizing unplanned outages.
+2. **Train and Tune the Model**  
+   - Baseline `RandomForestRegressor`.  
+   - Grid search for optimal hyperparameters.  
 
-- **Faster Iteration & Deployment:**  
-  Automated training, evaluation, and artifact management shorten time-to-market for improved models.
+3. **Make Predictions**  
+   - Predicts λ (failure rate) for new inputs.  
+   - Generates probabilities of occurrences using the Poisson distribution.  
+<img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/0f0f9c26-72a6-4aa7-a62c-af9d2c781273" />
 
-- **Consistency & Quality Assurance:**  
-  Versioned artifacts and reproducible pipelines reduce errors and ensure stable model performance in production.
-
-- **Scalable Decision-Making:**  
-  Utility functions can be embedded into production systems, enabling real-time risk assessment across multiple assets.
-
-- **Operational Efficiency & Savings:**  
-  Less manual intervention in model training and deployment translates to lower operational costs and more reliable insights for maintenance teams.
-
-In short, MLOps transforms this model from a one-off experiment into a **scalable, maintainable, and business-impacting solution**.
+4. **Visualize Results**  
+   - Creates probability distribution plots for predicted failures.  
 
 ---
 
-## 📝 How to Use
+## 💡 Business Benefits  
 
-Run the whole pipeline (install dependencies, train and evaluate the model):
+Applying predictive maintenance in this way helps:  
+
+- **Reduce downtime** by forecasting equipment failures in advance.  
+- **Save operational costs** through proactive maintenance planning.  
+- **Improve reliability** of assets by continuously monitoring performance.  
+- **Enable scalability** for deployment into real-time monitoring systems.  
+
+---
+
+## 📝 How to Run  
+
+Go to "Actions" on Github, create a yaml file and wait for Github Actions to execute the following pipeline:  
 
 ```bash
 # Install dependencies
 pip install -r requirements.txt
 
-# Train the model
-python train.py
+# Run the script
+python Predictive__Maintenance.py
 
-# Evaluate the model
-python evaluate.py
