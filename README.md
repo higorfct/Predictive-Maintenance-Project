@@ -31,6 +31,7 @@ It demonstrates how to prepare data, train the model, tune hyperparameters, make
 3. **Make Predictions**  
    - Predicts λ (failure rate) for new inputs.  
    - Generates probabilities of occurrences using the Poisson distribution.  
+<img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/0f0f9c26-72a6-4aa7-a62c-af9d2c781273" />
 
 4. **Visualize Results**  
    - Creates probability distribution plots for predicted failures.  
