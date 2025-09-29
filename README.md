@@ -50,7 +50,7 @@ Applying predictive maintenance in this way helps:
 
 ## 📝 How to Run  
 
-Install dependencies and execute the script:  
+Go to "Actions" on Github, create a yaml file and wait for Github Actions to execute the following pipeline:  
 
 ```bash
 # Install dependencies
@@ -58,3 +58,4 @@ pip install -r requirements.txt
 
 # Run the script
 python Predictive__Maintenance.py
+
