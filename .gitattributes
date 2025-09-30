@@ -1,0 +1,16 @@
+# Ensure consistent line endings for code
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.txt text eol=lf
+
+# CSV data files
+*.csv text eol=lf
+
+# Model artifacts should be treated as binary
+*.pkl binary
+
+# If you plan to use Git LFS (recommended for large data/models):
+# *.csv filter=lfs diff=lfs merge=lfs -text
+# *.pkl filter=lfs diff=lfs merge=lfs -text
