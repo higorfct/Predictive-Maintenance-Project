@@ -25,9 +25,9 @@ It demonstrates how to prepare data, train the model, tune hyperparameters, make
 ## 📂 Project Structure  
 
 - **`Predictive__Maintenance.py`**  
-  - Loads the dataset `failure_dataset.csv`.  
-  - Preprocesses features with `StandardScaler`.  
+  - Loads the dataset `failure_dataset.csv`.
   - Splits data into train and test sets.  
+  - Preprocesses features with `StandardScaler`.  
   - Trains a `RandomForestRegressor`.  
   - Runs **hyperparameter tuning** with `GridSearchCV`.  
   - Predicts equipment failures from operational data.  
