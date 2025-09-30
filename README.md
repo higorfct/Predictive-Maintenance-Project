@@ -24,6 +24,7 @@ It showcases how to prepare data, train models, save artifacts, evaluate metrics
 
 - **`train.py`**  
   - Loads the dataset `data/failure_dataset.csv`.
+  - Splits the data into train and test
   - Performs preprocessing (standardization with `StandardScaler`).
   - Trains a baseline `RandomForestRegressor` model.
   - Runs **hyperparameter tuning** with `GridSearchCV`.
