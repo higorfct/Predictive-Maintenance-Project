@@ -5,6 +5,23 @@ It demonstrates how to prepare data, train the model, tune hyperparameters, make
 
 ---
 
+## 🚀 How to use
+
+ 1. **Clone the repository and install dependencies:**
+ 
+    ```bash
+    git clone https://github.com/higorfct/Predictive-Maintenance-Project
+    cd Predictive-Maintenance-Project
+    pip install -r requirements.txt
+    ```
+
+
+
+
+
+
+---
+
 ## 📂 Project Structure  
 
 - **`Predictive__Maintenance.py`**  
